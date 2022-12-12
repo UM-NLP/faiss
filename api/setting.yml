@@ -1,0 +1,17 @@
+mysql_host: "<IP address>"
+mysql_user: "<usename>"
+mysql_password: "<password>"
+# maximum number of outputs:
+SIMILAR_THRESHOLD: <int>
+#Load a faiss index from either gcp or local disk
+FAISS_MODEL765:
+  gcs_project: "<google project name>"
+  bucket_name: "<bucket name>"
+  gcs_path_file: "<object>"
+  local_file_path: "<filename>"
+#Load an embedder from either gcp or local disk
+vectorizer:
+  gcs_project: "<google project name>"
+  bucket_name: "<bucket name>"
+  gcs_path_file: "<object>"
+  local_file_path: "<filename>"
