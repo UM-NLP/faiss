@@ -1,5 +1,4 @@
 import flask
-import search_engine as se
 from flask import request, jsonify
 import  json
 from waitress import serve
@@ -10,11 +9,11 @@ app.config["DEBUG"] = True
 def home():
     return "I'm alive!"
 
-@app.route('/search_765', methods=['POST'])
+@app.route('/api', methods=['POST'])
 def search_765():
     request_data = request.get_json()
     text = request_data['text']
-    result=se.search_765(text)
+    result="result for "+ text
     result=json.dumps({'respond': result})
     return result
 if __name__ == "__main__":
